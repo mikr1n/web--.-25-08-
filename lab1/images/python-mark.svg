@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Стилизованный знак Python">
+  <defs>
+    <linearGradient id="b" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4b9bd1"/><stop offset="1" stop-color="#285a9f"/></linearGradient>
+    <linearGradient id="y" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#f0c43a"/><stop offset="1" stop-color="#ffdf67"/></linearGradient>
+  </defs>
+  <rect width="220" height="220" rx="36" fill="#101725"/>
+  <path d="M108 25c-37 0-36 17-36 17v25h38v8H58S25 71 25 110s29 34 29 34h18v-26s-1-39 38-39h28V52c0-27-30-27-30-27Z" fill="url(#b)"/>
+  <circle cx="89" cy="46" r="6" fill="#fff" opacity=".9"/>
+  <path d="M112 195c37 0 36-17 36-17v-25h-38v-8h52s33 4 33-35-29-34-29-34h-18v26s1 39-38 39H82v27c0 27 30 27 30 27Z" fill="url(#y)"/>
+  <circle cx="131" cy="174" r="6" fill="#fff" opacity=".9"/>
+  <text x="110" y="118" fill="#fff" font-size="20" font-family="monospace" text-anchor="middle" font-weight="700">PY</text>
+</svg>

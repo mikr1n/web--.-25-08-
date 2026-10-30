@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Небольшая статья о языке программирования Python, подготовленная для лабораторной работы №1.">
+  <meta name="author" content="Илья">
+  <title>Python - история, обзор и примеры кода</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#top" aria-label="На главную страницу статьи">
+        <img src="images/python-mark.svg" alt="Стилизованный знак Python">
+        <span>Python / ЛР-1</span>
+      </a>
+      <nav aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#history">История</a></li>
+          <li><a href="#overview">Обзор</a></li>
+          <li><a href="#code">Код</a></li>
+          <li><a href="#requirements">Критерии</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Лабораторная работа №1</p>
+          <h1 id="page-title">Язык программирования Python: история, возможности и примеры</h1>
+          <p class="hero-lead">Небольшая статья о языке программирования Python с примерами кода и иллюстрациями.</p>
+        </div>
+        <figure class="hero-card">
+          <img src="images/python-mark.svg" alt="Графическое представление языка Python">
+          <figcaption>Иллюстрация к статье о Python.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="contents" aria-labelledby="contents-title">
+      <h2 id="contents-title">Содержание</h2>
+      <nav aria-label="Содержание статьи">
+        <ul>
+          <li><a href="#history">1. История создания Python</a></li>
+          <li><a href="#overview">2. Краткий обзор языка</a></li>
+          <li><a href="#code">3. Примеры кода</a></li>
+          <li><a href="#sources">4. Источники</a></li>
+          <li><a href="#requirements">5. Использованные HTML-теги и CSS-свойства</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <article>
+      <section id="history" class="section" aria-labelledby="history-title">
+        <h2 id="history-title">1. История создания Python</h2>
+        <figure class="float-left">
+          <img src="images/python-mark.svg" alt="Иллюстрация Python" loading="lazy">
+          <figcaption class="figure-caption">Символическое изображение Python.</figcaption>
+        </figure>
+        <p class="lead">Python начал разрабатываться в конце 1980-х - начале 1990-х годов Гвидо ван Россумом в нидерландском институте CWI. Официальная документация Python указывает, что язык создавался как преемник ABC.</p>
+        <p>Первый публичный выпуск Python относится к <time datetime="1991-02">1991 году</time>. Уже в ранней версии присутствовали классы, обработка исключений, функции и основные встроенные типы данных. Название языка связано не с пресмыкающимся: Гвидо ван Россум был поклонником британского комедийного шоу <cite>Monty Python’s Flying Circus</cite>.</p>
+        <p>В <strong>1995 году</strong> разработка продолжилась в CNRI. В <strong>2000 году</strong> появилась ветка Python 2.0, а в <strong>2001 году</strong> была создана Python Software Foundation (PSF), организация, поддерживающая развитие экосистемы языка.</p>
+        <p class="notice"><strong>Главная идея:</strong> Python создавался с акцентом на читаемость исходного кода и возможность быстро решать практические задачи. Это хорошо видно по синтаксису с отступами и большому набору стандартных средств.</p>
+        <figure class="float-right">
+          <img src="images/python-timeline.svg" alt="Временная шкала основных этапов развития Python" loading="lazy">
+          <figcaption class="figure-caption">Упрощённая временная шкала развития языка.</figcaption>
+        </figure>
+        <h3>Ключевые этапы</h3>
+        <ol class="step-list">
+          <li><time datetime="1989">1989</time> - начало разработки языка в CWI.</li>
+          <li><time datetime="1991">1991</time> - первая публичная публикация Python.</li>
+          <li><time datetime="1995">1995</time> - продолжение работы над языком в CNRI.</li>
+          <li><time datetime="2000">2000</time> - выпуск Python 2.0.</li>
+          <li><time datetime="2001">2001</time> - создание Python Software Foundation.</li>
+        </ol>
+        <p><abbr title="Python Enhancement Proposal">PEP</abbr> - документ, используемый для предложений по развитию Python. Подробнее о происхождении и лицензии можно узнать в <a href="https://www.python.org/download/releases/2.0/license/" target="_blank" rel="noopener">странице Python.org с историей Python</a>, а русскоязычную справочную статью можно открыть в <a href="https://ru.wikipedia.org/wiki/Python" target="_blank" rel="noopener">Википедии</a>.</p>
+        <p><a href="#contents-title">↑ Вернуться к содержанию</a></p>
+        <div class="timeline"></div>
+      </section>
+
+      <section id="overview" class="section" aria-labelledby="overview-title">
+        <h2 id="overview-title">2. Краткий обзор языка</h2>
+        <p class="lead">Python - высокоуровневый интерпретируемый язык общего назначения. Официальный учебник отмечает его читаемый синтаксис, динамическую типизацию, развитые структуры данных и удобство для скриптов и быстрой разработки.</p>
+        <div class="callout-grid">
+          <article class="callout">
+            <h3>Синтаксис</h3>
+            <p>Важная особенность Python - <mark>отступы</mark> используются для обозначения блоков кода.</p>
+          </article>
+          <article class="callout">
+            <h3>Модули</h3>
+            <p>Программу можно разделять на модули и использовать большую стандартную библиотеку.</p>
+          </article>
+          <article class="callout">
+            <h3>Платформы</h3>
+            <p>Интерпретатор доступен для основных настольных операционных систем.</p>
+          </article>
+        </div>
+
+        <figure class="float-center">
+          <img src="images/python-editor.svg" alt="Стилизованный редактор с подсветкой синтаксиса Python" loading="lazy">
+          <figcaption class="figure-caption">Иллюстрация кода Python с цветовой подсветкой элементов.</figcaption>
+        </figure>
+
+        <h3>Основные характеристики</h3>
+        <div class="data-wrap">
+          <table>
+            <caption>Таблица 1 - Краткая характеристика Python</caption>
+            <thead>
+              <tr>
+                <th scope="col">Характеристика</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Практическое значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Уровень абстракции</th>
+                <td>Высокоуровневый язык.</td>
+                <td>Позволяет сосредоточиться на логике задачи.</td>
+              </tr>
+              <tr>
+                <th scope="row">Типизация</th>
+                <td>Динамическая.</td>
+                <td>Тип переменной определяется во время выполнения программы.</td>
+              </tr>
+              <tr>
+                <th scope="row">Выполнение</th>
+                <td>Используется интерпретатор.</td>
+                <td>Удобно быстро запускать и проверять небольшие программы.</td>
+              </tr>
+              <tr>
+                <th scope="row">Парадигмы</th>
+                <td>Поддерживаются объектно-ориентированный и другие подходы.</td>
+                <td>Язык подходит для разных типов задач.</td>
+              </tr>
+              <tr>
+                <th scope="row">Библиотеки</th>
+                <td>Есть развитая стандартная библиотека и сторонние пакеты.</td>
+                <td>Можно расширять возможности языка готовыми модулями.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Где применяется Python</h3>
+        <ul class="feature-list">
+          <li>автоматизация рутинных задач и обработка файлов;</li>
+          <li>разработка веб-приложений и серверной логики;</li>
+          <li>анализ данных и научные вычисления;</li>
+          <li>тестирование, прототипирование и разработка инструментов.</li>
+        </ul>
+
+        <h3>Что делает язык удобным</h3>
+        <ul class="image-marker-list">
+          <li>читаемый синтаксис и относительно компактный код;</li>
+          <li>большое количество готовых стандартных модулей;</li>
+          <li>возможность экспериментировать с кодом в интерактивном режиме.</li>
+        </ul>
+
+        <details class="details-box">
+          <summary>Дополнительный факт о названии Python</summary>
+          <p>Название языка связано с названием комедийного шоу <em>Monty Python’s Flying Circus</em>, которое нравилось его создателю.</p>
+        </details>
+        <p><a href="#contents-title">↑ Вернуться к содержанию</a></p>
+      </section>
+
+      <section id="code" class="section" aria-labelledby="code-title">
+        <h2 id="code-title">3. Примеры кода</h2>
+        <p class="lead">Ниже приведены небольшие примеры. Цвета выделяют ключевые слова, функции, строки, числа и комментарии по аналогии с темами современных сред разработки.</p>
+
+        <div class="code-panel" aria-label="Пример 1">
+          <div class="code-head"><span>hello.py</span><span class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></div>
+          <pre><code><span class="name">name</span> <span class="op">=</span> <span class="builtin">input</span>(<span class="str">"Как тебя зовут? "</span>)
+<span class="builtin">print</span>(<span class="str">f"Привет, {name}!"</span>)</code></pre>
+        </div>
+
+        <div class="code-panel" aria-label="Пример 2">
+          <div class="code-head"><span>function.py</span><span>Python</span></div>
+          <pre><code><span class="kw">def</span> <span class="fn">square</span>(<span class="kw">number</span>):
+    <span class="cm"># Возвращаем квадрат числа</span>
+    <span class="kw">return</span> number <span class="op">*</span> number
+
+result <span class="op">=</span> square(<span class="num">7</span>)
+<span class="builtin">print</span>(result)</code></pre>
+        </div>
+
+        <div class="code-panel" aria-label="Пример 3">
+          <div class="code-head"><span>list_comprehension.py</span><span>Python</span></div>
+          <pre><code>numbers <span class="op">=</span> [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>]
+
+squares <span class="op">=</span> [number <span class="op">**</span> <span class="num">2</span> <span class="kw">for</span> number <span class="kw">in</span> numbers]
+
+<span class="builtin">print</span>(squares)</code></pre>
+        </div>
+
+        <blockquote>
+          В этих примерах показаны ввод и вывод данных, функция с параметром и возвратом значения, а также генерация нового списка из существующего.
+          <cite>Синтаксис соответствует базовым конструкциям Python.</cite>
+        </blockquote>
+        <p><a href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener">Перейти к разделу Python.org для начинающих</a> · <a href="#history">К разделу «История»</a></p>
+      </section>
+
+      <section id="sources" class="section sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">4. Источники</h2>
+        <ul>
+          <li><a href="https://www.python.org/download/releases/2.0/license/" target="_blank" rel="noopener">Python.org - история Python</a></li>
+          <li><a href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener">Python.org - начало работы с Python</a></li>
+          <li><a href="https://ru.wikipedia.org/wiki/Python" target="_blank" rel="noopener">Википедия - Python</a></li>
+          <li><a href="https://github.com/necolas/normalize.css" target="_blank" rel="noopener">normalize.css v8.0.1 - официальный репозиторий</a></li>
+        </ul>
+        <p><small>Иллюстрации сохранены в локальной папке проекта.</small></p>
+        <p><a href="#top">↑ В начало страницы</a></p>
+      </section>
+
+      <section id="requirements" class="section" aria-labelledby="requirements-title">
+        <h2 id="requirements-title">5. Использованные HTML-теги и CSS-свойства</h2>
+        <h3>HTML-теги</h3>
+        <ul class="tag-list">
+          <li>&lt;html&gt;</li><li>&lt;head&gt;</li><li>&lt;title&gt;</li><li>&lt;meta&gt;</li><li>&lt;link&gt;</li><li>&lt;body&gt;</li><li>&lt;header&gt;</li><li>&lt;nav&gt;</li><li>&lt;ul&gt;</li><li>&lt;li&gt;</li><li>&lt;main&gt;</li><li>&lt;section&gt;</li><li>&lt;article&gt;</li><li>&lt;h1&gt;</li><li>&lt;h2&gt;</li><li>&lt;h3&gt;</li><li>&lt;p&gt;</li><li>&lt;a&gt;</li><li>&lt;strong&gt;</li><li>&lt;em&gt;</li><li>&lt;mark&gt;</li><li>&lt;small&gt;</li><li>&lt;code&gt;</li><li>&lt;pre&gt;</li><li>&lt;span&gt;</li><li>&lt;figure&gt;</li><li>&lt;img&gt;</li><li>&lt;figcaption&gt;</li><li>&lt;blockquote&gt;</li><li>&lt;cite&gt;</li><li>&lt;table&gt;</li><li>&lt;caption&gt;</li><li>&lt;thead&gt;</li><li>&lt;tbody&gt;</li><li>&lt;tr&gt;</li><li>&lt;th&gt;</li><li>&lt;td&gt;</li><li>&lt;ol&gt;</li><li>&lt;div&gt;</li><li>&lt;footer&gt;</li><li>&lt;address&gt;</li><li>&lt;time&gt;</li><li>&lt;abbr&gt;</li><li>&lt;details&gt;</li><li>&lt;summary&gt;</li><li>&lt;i&gt;</li>
+        </ul>
+        <h3>CSS-свойства</h3>
+        <ul class="property-list">
+          <li>align-items</li><li>background</li><li>border</li><li>border-bottom</li><li>border-collapse</li><li>border-left</li><li>border-radius</li><li>border-top</li><li>box-sizing</li><li>caption-side</li><li>clear</li><li>color</li><li>cursor</li><li>display</li><li>flex-direction</li><li>flex-wrap</li><li>float</li><li>font-display</li><li>font-family</li><li>font-size</li><li>font-style</li><li>font-weight</li><li>gap</li><li>grid-template-columns</li><li>height</li><li>justify-content</li><li>letter-spacing</li><li>line-height</li><li>list-style</li><li>list-style-image</li><li>margin</li><li>margin-bottom</li><li>margin-top</li><li>max-width</li><li>min-width</li><li>overflow</li><li>overflow-x</li><li>padding</li><li>padding-bottom</li><li>padding-left</li><li>padding-top</li><li>scroll-behavior</li><li>scroll-margin-top</li><li>shape-outside</li><li>tab-size</li><li>text-align</li><li>text-decoration</li><li>text-transform</li><li>text-underline-offset</li><li>vertical-align</li><li>white-space</li><li>width</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner container">
+      <address>Лабораторная работа №1 · Проектирование, разработка и оптимизация WEB-приложений</address>
+      <a class="to-top" href="#top">Наверх</a>
+    </div>
+  </footer>
+</body>
+</html>

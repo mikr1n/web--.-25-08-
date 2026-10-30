@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Стилизованный редактор кода Python">
+  <rect width="900" height="430" rx="26" fill="#0b1220"/>
+  <rect x="30" y="30" width="840" height="370" rx="18" fill="#132238" stroke="#2e4668" stroke-width="3"/>
+  <circle cx="58" cy="57" r="7" fill="#ee6f51"/><circle cx="80" cy="57" r="7" fill="#f0c43a"/><circle cx="102" cy="57" r="7" fill="#65c98b"/>
+  <rect x="50" y="83" width="130" height="285" rx="10" fill="#0f1929"/>
+  <g font-family="monospace" font-size="18" fill="#7186a4">
+    <text x="72" y="113">01</text><text x="72" y="143">02</text><text x="72" y="173">03</text><text x="72" y="203">04</text><text x="72" y="233">05</text><text x="72" y="263">06</text><text x="72" y="293">07</text><text x="72" y="323">08</text>
+  </g>
+  <g font-family="monospace" font-size="18">
+    <text x="205" y="113" fill="#d783ff">def</text><text x="246" y="113" fill="#f5f7fb">hello(name):</text>
+    <text x="220" y="143" fill="#62a8ea">print</text><text x="278" y="143" fill="#f5f7fb">(</text><text x="287" y="143" fill="#8bd17c">f"Привет, {name}!"</text><text x="470" y="143" fill="#f5f7fb">)</text>
+    <text x="205" y="173" fill="#9aa7bd"># простой пример</text>
+    <text x="205" y="203" fill="#d783ff">for</text><text x="242" y="203" fill="#f5f7fb"> i </text><text x="257" y="203" fill="#e9b949">in</text><text x="287" y="203" fill="#62a8ea">range</text><text x="348" y="203" fill="#f5f7fb">(3):</text>
+    <text x="220" y="233" fill="#62a8ea">print</text><text x="278" y="233" fill="#f5f7fb">(i)</text>
+    <text x="205" y="263" fill="#d783ff">items</text><text x="264" y="263" fill="#f5f7fb"> = [</text><text x="310" y="263" fill="#8bd17c">1, 2, 3</text><text x="382" y="263" fill="#f5f7fb">]</text>
+    <text x="205" y="293" fill="#62a8ea">result</text><text x="264" y="293" fill="#f5f7fb"> = [x * 2 for x in items]</text>
+    <text x="205" y="323" fill="#d783ff">print</text><text x="263" y="323" fill="#f5f7fb">(result)</text>
+  </g>
+</svg>
