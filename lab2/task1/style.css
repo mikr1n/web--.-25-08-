@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { min-height: 100vh; }
+.screen { min-height: 100vh; display: flex; justify-content: center; align-items: center; gap: 24px; }
+.number { display: flex; flex-direction: column; gap: 8px; }
+.row { display: flex; gap: 8px; }
+.pixel { width: 24px; height: 24px; visibility: hidden; }
+.pixel.on { background-color: #18243a; visibility: visible; }
+@media (max-width: 599px) { .screen { gap: 16px; } .number, .row { gap: 5px; } .pixel { width: 18px; height: 18px; } }
