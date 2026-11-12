@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Адаптивная форма регистрации абитуриента">
+  <title>Регистрация абитуриента — Приёмная комиссия</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Приёмная комиссия, главная">
+      <span class="brand-mark">П</span><span>ПРИЁМНАЯ<br>КОМИССИЯ</span>
+    </a>
+    <div class="top-note"><span class="status-dot"></span> Приём документов открыт</div>
+  </header>
+
+  <main id="top" class="page-shell">
+    <aside class="intro-panel">
+      <div class="eyebrow"><span>2026 / 2027</span><span class="eyebrow-line"></span><span>ПРИЁМНАЯ КАМПАНИЯ</span></div>
+      <h1>Твой путь<br>начинается <em>здесь.</em></h1>
+      <p class="intro-copy">Заполни анкету, чтобы рассказать о себе и выбрать направление. Подготовь паспорт и документ об образовании.</p>
+    </aside>
+
+    <section class="form-panel" aria-labelledby="form-title">
+      <div class="form-heading">
+        <div><p class="form-kicker">ШАГ 01 <span>ИЗ 03</span></p><h2 id="form-title">Анкета абитуриента</h2></div>
+        <span class="required-note"><i>*</i> обязательные поля</span>
+      </div>
+      <form id="admission-form">
+        <fieldset>
+          <legend><span class="legend-num">01</span> Личные данные</legend>
+          <div class="fields two-col">
+            <div class="field"><label for="full-name">Фамилия, имя и отчество <i>*</i></label><input id="full-name" name="fullName" type="text" placeholder="Фамилия, имя и отчество" autocomplete="name" required></div>
+            <div class="field"><label for="birth-date">Дата рождения <i>*</i></label><input id="birth-date" name="birthDate" type="date" aria-label="Дата рождения" required></div>
+            <div class="field"><label for="passport">Серия и номер паспорта <i>*</i></label><input id="passport" name="passport" type="text" placeholder="Серия и номер паспорта" inputmode="numeric" pattern="[0-9 ]{10,12}" title="Введите серию и номер паспорта (10 цифр)" required></div>
+            <div class="field"><label for="citizenship">Гражданство <i>*</i></label><select id="citizenship" name="citizenship" required><option value="" disabled selected>Выберите гражданство</option><option>Российская Федерация</option><option>Другое</option></select></div>
+          </div>
+          <div class="field radio-field"><span class="field-caption">Пол</span><div class="choice-row"><label class="choice"><input type="radio" name="gender" value="Женский" required><span class="custom-radio"></span>Женский</label><label class="choice"><input type="radio" name="gender" value="Мужской"><span class="custom-radio"></span>Мужской</label><label class="choice"><input type="radio" name="gender" value="Не указывать"><span class="custom-radio"></span>Не указывать</label></div></div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="legend-num">02</span> Контакты</legend>
+          <div class="fields two-col">
+            <div class="field"><label for="phone">Номер телефона <i>*</i></label><input id="phone" name="phone" type="tel" placeholder="Номер телефона" autocomplete="tel" pattern="[+0-9() -]{10,20}" title="Введите номер телефона" required></div>
+            <div class="field"><label for="email">Электронная почта <i>*</i></label><input id="email" name="email" type="email" placeholder="Электронная почта" autocomplete="email" required></div>
+            <div class="field span-two"><label for="address">Адрес проживания</label><input id="address" name="address" type="text" placeholder="Адрес проживания" autocomplete="street-address"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="legend-num">03</span> Поступление</legend>
+          <div class="fields two-col">
+            <div class="field"><label for="education">Предыдущее образование <i>*</i></label><select id="education" name="education" required><option value="" disabled selected>Выберите образование</option><option>Среднее общее (11 классов)</option><option>Среднее профессиональное</option><option>Высшее</option></select></div>
+            <div class="field"><label for="program">Направление подготовки <i>*</i></label><select id="program" name="program" required><option value="" disabled selected>Выберите направление</option><option>Информационные системы и технологии</option><option>Программная инженерия</option><option>Прикладная информатика</option><option>Дизайн цифровых продуктов</option><option>Экономика</option></select></div>
+            <div class="field"><label for="score">Сумма баллов ЕГЭ</label><input id="score" name="score" type="number" placeholder="Сумма баллов ЕГЭ" min="0" max="300" inputmode="numeric"></div>
+            <div class="field"><label for="document">Документ об образовании</label><input class="file-input" id="document" name="document" type="file" accept=".pdf,.jpg,.jpeg,.png"><span class="file-hint">PDF или изображение, до 10 МБ</span></div>
+            <div class="field span-two"><label for="note">Дополнительная информация</label><textarea id="note" name="note" rows="3" placeholder="Дополнительная информация (необязательно)"></textarea></div>
+          </div>
+        </fieldset>
+
+        <div class="form-footer">
+          <label class="agreement"><input type="checkbox" name="agreement" required><span class="custom-check"></span><span>Я даю согласие на обработку персональных данных <i>*</i></span></label>
+          <button type="submit">Отправить анкету <span>→</span></button>
+        </div>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        <p class="privacy-note"><span>▣</span> Ваши данные защищены и используются только для рассмотрения заявления.</p>
+      </form>
+    </section>
+  </main>
+  <footer><span>УЧЕБНЫЙ ПРОЕКТ · ВАРИАНТ 18</span><span>АДАПТИВНАЯ ФОРМА АБИТУРИЕНТА</span></footer>
+</body>
+</html>
